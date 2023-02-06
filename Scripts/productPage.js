@@ -89,7 +89,7 @@ function wrapOn4(){
 }
 
 // fetching data----------
-// https://calm-beach-52240.herokuapp.com/mensData
+// https://mytheresaapi.onrender.com/mensData
 // filtering-----------------
 
 let cate = document.querySelectorAll(".cat_list")
@@ -150,7 +150,7 @@ const append=async (data)=>{
 let post = document.getElementById("right_product")
 let btn_div = document.getElementById("bottom_page")
 const getDATA = async(clicked_button,limit)=>{
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData`)
     let data = await res.json()
     
     createButtons(data.length,18)
@@ -160,7 +160,7 @@ const getDATA = async(clicked_button,limit)=>{
 const getpageDATA = async(clicked_button,limit)=>{
     post.innerHTML=null;
    
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?_page=${clicked_button}&_limit=${limit}`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?_page=${clicked_button}&_limit=${limit}`)
     let data = await res.json()
     
     append(data,post)
@@ -227,19 +227,19 @@ function lowToHigh(){
 }
 const lh=async()=>{
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?_sort=price&_order=asc`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?_sort=price&_order=asc`)
     let data = await res.json()
     append(data)
 }
 const hl=async()=>{
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?_sort=price&_order=desc`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?_sort=price&_order=desc`)
     let data = await res.json()
     append(data)
 }
 const random=async()=>{
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData`)
     let data = await res.json()
     append(data)
 }
@@ -252,7 +252,7 @@ filterBag()
 const filterBag=async()=>{
     console.log("y")
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?type=bags`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?type=bags`)
     let data = await res.json()
     append(data)
 }
@@ -264,7 +264,7 @@ filterCloth()
 const filterCloth=async()=>{
     console.log("y")
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?type=cloths`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?type=cloths`)
     let data = await res.json()
     append(data)
 }
@@ -276,7 +276,7 @@ filterShoes()
 const filterShoes=async()=>{
     console.log("y")
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?type=shoes`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?type=shoes`)
     let data = await res.json()
     append(data)
 }
@@ -288,7 +288,7 @@ acc.onclick=()=>{
 const filteracc=async()=>{
     console.log("y")
     post.innerHTML=null;
-    let res = await fetch(`https://calm-beach-52240.herokuapp.com/mensData?type=accessories`)
+    let res = await fetch(`https://mytheresaapi.onrender.com/mensData?type=accessories`)
     let data = await res.json()
     append(data)
 }

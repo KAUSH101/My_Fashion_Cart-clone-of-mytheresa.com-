@@ -15,9 +15,9 @@ document.getElementById("lastEnd").insertAdjacentHTML("afterend", footer());
 navbarSrc();
 
 //////////Variable Declarations
-let regApi = `https://calm-beach-52240.herokuapp.com/register`;
-let logInApi = `https://calm-beach-52240.herokuapp.com/loginData`;
-let adminApi = `https://calm-beach-52240.herokuapp.com/adminData`;
+let regApi = `https://mytheresaapi.onrender.com/register`;
+let logInApi = `https://mytheresaapi.onrender.com/loginData`;
+let adminApi = `https://mytheresaapi.onrender.com/adminData`;
 let authRegSubmitBtn = document.getElementById("authRegSubmitBtn");
 
 let regForm = document.getElementById("authRegForm");
